@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.w2m</groupId>
+		<artifactId>w2m</artifactId>
+		<version>0.0.1</version>
+	</parent>
+
+	<!-- Project information -->
+	<groupId>com.w2m.data</groupId>
+	<artifactId>w2m-data</artifactId>
+	<name>w2m-data</name>
+	<description>Data providers for w2m application</description>
+
+	<!-- Project properties -->
+	<properties>
+		<org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
+	</properties>
+
+	<!-- Dependencies -->
+	<dependencies>
+		<dependency>
+			<groupId>com.w2m.model</groupId>
+			<artifactId>w2m-model</artifactId>
+		</dependency>
+
+		<!-- Spring Cache dependency -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-cache</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.ben-manes.caffeine</groupId>
+			<artifactId>caffeine</artifactId>
+		</dependency>
+		
+		<!-- Spring AOP dependency -->
+	    <dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-aop</artifactId>
+	    </dependency>
+	    
+	    <dependency>
+	        <groupId>org.aspectj</groupId>
+	        <artifactId>aspectjrt</artifactId>
+	    </dependency>
+
+		<!-- Agregar la dependencia de MapStruct -->
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+			<version>${org.mapstruct.version}</version>
+		</dependency>
+
+		<!-- Dependencia de MapStruct Spring Extensions para integración con
+		Spring -->
+		<dependency>
+			<groupId>org.mapstruct.extensions.spring</groupId>
+			<artifactId>mapstruct-spring-annotations</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
+		<!-- Kafka Integration -->
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+		</dependency>
+	</dependencies>
+
+	<!-- Build Plugins -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>19</source> <!-- depending on your project -->
+					<target>19</target> <!-- depending on your project -->
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.mapstruct</groupId>
+							<artifactId>mapstruct-processor</artifactId>
+							<version>${org.mapstruct.version}</version>
+						</path>
+						<!-- other annotation processors -->
+					</annotationProcessorPaths>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

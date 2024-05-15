@@ -1,0 +1,65 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: your_username
+      changes:
+        - insert:
+            tableName: ship
+            columns:
+              - column:
+                  name: name
+                  value: "Enterprise"
+        - insert:
+            tableName: ship
+            columns:
+              - column:
+                  name: name
+                  value: "Voyager"
+        - insert:
+            tableName: ship
+            columns:
+              - column:
+                  name: name
+                  value: "Defiant"
+        - insert:
+            tableName: ship
+            columns:
+              - column:
+                  name: name
+                  value: "Discovery"
+        - insert:
+            tableName: ship
+            columns:
+              - column:
+                  name: name
+                  value: "Atlantis"
+        - insert:
+            tableName: ship
+            columns:
+              - column:
+                  name: name
+                  value: "Odyssey"
+        - insert:
+            tableName: ship
+            columns:
+              - column:
+                  name: name
+                  value: "Prometheus"
+        - insert:
+            tableName: ship
+            columns:
+              - column:
+                  name: name
+                  value: "Columbia"
+        - insert:
+            tableName: ship
+            columns:
+              - column:
+                  name: name
+                  value: "Challenger"
+        - insert:
+            tableName: ship
+            columns:
+              - column:
+                  name: name
+                  value: "Endeavour"

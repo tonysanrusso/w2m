@@ -1,0 +1,27 @@
+ShipsPath:
+  get:
+    summary: Lista todas las naves
+    responses:
+      '200':
+        description: Lista de naves
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '../components/schemas/ship.yaml#/ShipDTO'
+  post:
+    summary: Crea una nueva nave
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/ship.yaml#/ShipDTO'
+    responses:
+      '201':
+        description: Nave creada
+        content:
+          application/json:
+            schema:
+              $ref: '../components/schemas/ship.yaml#/ShipDTO'

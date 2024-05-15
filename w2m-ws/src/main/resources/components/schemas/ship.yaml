@@ -1,0 +1,12 @@
+ShipDTO:
+  type: object
+  properties:
+    id:
+      type: integer
+      format: int32
+      description: Identificador único de la nave
+    name:
+      type: string
+      description: Nombre de la nave
+  required:
+    - name

@@ -1,0 +1,48 @@
+ShipsIdPath:
+  get:
+    summary: Obtiene una nave por su ID
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+    responses:
+      '200':
+        description: Detalle de la nave
+        content:
+          application/json:
+            schema:
+              $ref: '../components/schemas/ship.yaml#/ShipDTO'
+  put:
+    summary: Actualiza una nave existente
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../components/schemas/ship.yaml#/ShipDTO'
+    responses:
+      '200':
+        description: Nave actualizada
+        content:
+          application/json:
+            schema:
+              $ref: '../components/schemas/ship.yaml#/ShipDTO'
+  delete:
+    summary: Elimina una nave
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+    responses:
+      '204':
+        description: Nave eliminada

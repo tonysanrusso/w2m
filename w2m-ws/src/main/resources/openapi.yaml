@@ -1,0 +1,17 @@
+openapi: 3.0.0
+info:
+  title: API de Búsqueda de Hoteles
+  version: 1.0.0
+servers:
+  - url: 'http://localhost:8080'
+
+paths:
+  /ships:
+    $ref: './paths/ships.yaml#/ShipsPath'
+  /ships/{id}:
+    $ref: './paths/ships_id.yaml#/ShipsIdPath'
+
+components:
+  schemas:
+    ShipDTO:
+      $ref: './components/ship.yaml#/ShipDTO'
